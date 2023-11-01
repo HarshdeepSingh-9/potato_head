@@ -81,8 +81,16 @@ function saveImg() {
     var container = document.getElementById('content');
     html2canvas(container).then(canvas => {
         // As Base64 string
-        const imgageBase64 = canvas.toDataURL("image/png");
-        console.log(imgageBase64);
-        });
+        const captureDiv = document.getElementById('content');
+        const dataURL = canvas.toDataURL();
+
+        // Create a link element and trigger the download
+        const a = document.createElement('a');
+        a.href = dataURL;
+        a.download = 'captured_image.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
 }
 
