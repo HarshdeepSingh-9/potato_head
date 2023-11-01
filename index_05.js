@@ -79,44 +79,10 @@ function drop(event) {
 
 function saveImg() {
     var container = document.getElementById('content');
-    html2canvas(container).then((canvas) => {
-        // Get the base64 URL from the canvas object
-        console.log(container);
-       const element1 = container;
-        const newPageContent = `
-  <html>
-    <head>
-      <title>New Page</title>
-      <link rel="stylesheet" href="style_05.css">
-    </head>
-    <body>
-      <h1>Extracted Elements</h1>
-      <div>${element1.innerHTML}</div>
-    </body>
-  </html>
-`;
-
-// Open new window with the created content
-const newWindow = window.open();
-newWindow.document.write(newPageContent);
-const myElement = newWindow.document.getElementById('Potato_im');
-const myEar = newWindow.document.getElementsByClassName('earsclm');
-// Get the current margin-left value
-const currentMarginLeft = parseInt(myElement.style.marginLeft) || 0;
-const newMarginLeft = currentMarginLeft + 250;
-myElement.style.marginLeft = newMarginLeft + 'px';
-
-// Get the current margin-left value
-const currentMarginLeftE = parseInt(myEar.style.marginLeft) || 0;
-const newMarginLeftE = currentMarginLeft + 1050;
-myEar.style.marginLeft = newMarginLeftE + 'px';
-
-// Calculate the new margin-left value
- // You can adjust the increment as needed
-
-// Update the margin-left property
-
-
-    });
+    html2canvas(container).then(canvas => {
+        // As Base64 string
+        const imgageBase64 = canvas.toDataURL("image/png");
+        console.log(imgageBase64);
+        });
 }
 
