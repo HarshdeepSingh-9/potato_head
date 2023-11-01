@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_05.css">
+    <script src="index_05.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+    <div class="my-btn">
+        <label class="switch" onclick="switch_toggle()">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <br>
+    <div class="Container" id="content">
+        <img src="https://activity-mom.com/wp-content/uploads/2011/03/magnetic-mr-potato-head.jpg" id="Potato_im"alt="">
+        <div class="reccive hat r1" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <span id="image-ct_hat"></span>
+        </div>
+        <div class="earsclm">
+            <div class="reccive ears r4" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <span id="image-ct_ears1"></span>
+            </div>
+            <div class="reccive ears r5" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <span id="image-ct_ears2"></span>
+            </div>
+        </div>
+        <div class="reccive eyes r2" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <span id="image-ct_eyes1"></span>
+        </div>
+
+        <div class="reccive nose r3" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <span id="image-ct_nose"></span>
+        </div>
+        <div class="reccive lips r6" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <span id="image-ct_lips"></span>
+        </div>
+    </div>
+    <button id="saveBtn" onclick="saveImg()">Save as Image</button>
+    <div class="Nose-container">
+        <h1 id="drM">Hat</h1>
+        <div class="dropable-parts">
+            <img src="hat.png" class="dropable-items" alt="" id="dragImage-h1" draggable="true"
+                ondragstart="drag(event)">
+            <img src="hat2.png" class="dropable-items" alt="" id="dragImage-h2" draggable="true"
+                ondragstart="drag(event)">
+        </div>
+        <div class="Nose-container">
+            <h1>Eyes</h1>
+            <div class="dropable-parts">
+                <img src="pEyes.png" draggable="true" class="dropable-items" alt="" id="dragImage-e1" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="eyes2.png" draggable="true" class="dropable-items" alt="" id="dragImage-e2" draggable="true"
+                    ondragstart="drag(event)">
+            </div>
+        </div>
+
+        <div class="Nose-container">
+            <h1>Nose</h1>
+            <div class="dropable-parts">
+                <img src="nose.png" draggable="true" class="dropable-items" alt="" id="dragImage-n1" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="nose-2.png" draggable="true" class="dropable-items" alt="" id="dragImage-n2" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="https://www.freepnglogos.com/uploads/nose-png/dog-nose-transparent-png-stickpng-30.png"
+                    draggable="true" class="dropable-items" alt="" id="dragImage-n3" draggable="true"
+                    ondragstart="drag(event)">
+            </div>
+        </div>
+        <div class="Nose-container">
+            <h1>Ears</h1>
+            <div class="dropable-parts">
+                <img src="ear.png" class="dropable-items" draggable="true" alt="" id="dragImage-ear1" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="ear-r.png" class="dropable-items" draggable="true" alt="" id="dragImage-ear2" draggable="true"
+                    ondragstart="drag(event)">
+            </div>
+        </div>
+        <div class="Nose-container">
+            <h1>Lips</h1>
+            <div class="dropable-parts">
+                <img src="lips1.png" class="dropable-items" draggable="true" alt="" id="dragImage-lip1" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="lips2.png" class="dropable-items" draggable="true" alt="" id="dragImage-lip2" draggable="true"
+                    ondragstart="drag(event)">
+                <img src="lips3.png" class="dropable-items" draggable="true" alt="" id="dragImage-lip3" draggable="true"
+                    ondragstart="drag(event)">
+            </div>
+        </div>
+
+</body>
+
+</html>
