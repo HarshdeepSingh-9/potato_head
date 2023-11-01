@@ -78,21 +78,22 @@ function drop(event) {
 }
 
 function saveImg() {
-    const container = document.getElementById('content');
-    container.onload
-    html2canvas(container).then(canvas => {
-        // As Base64 string
-        const dataURL = canvas.toDataURL();
-        console.log(document.getElementById("Potato_im"));
+    // Add a delay to allow elements to load
+    setTimeout(() => {
+        const container = document.getElementById('content');
+        html2canvas(container).then(canvas => {
+            // As Base64 string
+            const dataURL = canvas.toDataURL();
 
-        // Create a link element and trigger the download
-        const a = document.createElement('a');
-        a.href = dataURL;
-        a.download = 'captured_image.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    });
+            // Create a link element and trigger the download
+            const a = document.createElement('a');
+            a.href = dataURL;
+            a.download = 'captured_image.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    }, 1000); // 1000 milliseconds (1 second) delay
 }
 function resetImage() {
     location.reload(); // Reload the page
