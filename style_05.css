@@ -131,6 +131,7 @@ input:checked+.slider:before {
     margin: 20px;
     min-height: 800px;
     background-color: rgb(255, 255, 255);
+    background-image: url(https://activity-mom.com/wp-content/uploads/2011/03/magnetic-mr-potato-head.jpg);
     border: 2px double black;
     background-repeat: no-repeat;
     background-size: contain;
