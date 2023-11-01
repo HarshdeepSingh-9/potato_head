@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
 </head>
 
@@ -22,7 +24,8 @@
     </div>
     <br>
     <div class="Container" id="content">
-        <img src="https://activity-mom.com/wp-content/uploads/2011/03/magnetic-mr-potato-head.jpg" id="Potato_im"alt="">
+        <img src="https://activity-mom.com/wp-content/uploads/2011/03/magnetic-mr-potato-head.jpg" id="Potato_im"
+            alt="">
         <div class="reccive hat r1" id="dropArea" ondragover="allowDrop(event)" ondrop="drop(event)">
             <span id="image-ct_hat"></span>
         </div>
@@ -45,8 +48,12 @@
             <span id="image-ct_lips"></span>
         </div>
     </div>
-    <button id="saveBtn" onclick="saveImg()">Save as Image</button>
+    <div class="mt-3">
+        <button class="btn btn-primary mr-2" onclick="saveImage()">Save Image</button>
+        <button class="btn btn-danger" onclick="resetImage()">Reset</button>
+      </div>
     <div class="Nose-container">
+        <h1> Part 1</h1>
         <h1 id="drM">Hat</h1>
         <div class="dropable-parts">
             <img src="hat.png" class="dropable-items" alt="" id="dragImage-h1" draggable="true"
@@ -96,6 +103,20 @@
                     ondragstart="drag(event)">
             </div>
         </div>
+        <br>
+        <div>
+            <h1>Part 2</h1>
+            <img id="normal-image" src="https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg" alt="Normal Image">
+            <img id="normal-image" src="https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408-825x465.jpg" alt="Normal Image">
+        </div>
+       
+        </div>
+
+       
+    
+
+
+    </div>
 
 </body>
 
