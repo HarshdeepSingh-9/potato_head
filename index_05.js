@@ -86,12 +86,14 @@ function saveImg() {
 
         // Create a link element and trigger the download
         const a = document.createElement('a');
-        a.append(potato_img);
+        const div_1 = document.createElement('div');
+        div_1.append(potato_img);
         a.href = dataURL;
         a.download = 'captured_image.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        div_1.append(a);
+        document.body.appendChild(div_1);
+        div_1.click();
+        document.body.removeChild(div_1);
     });
 }
 
