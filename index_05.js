@@ -78,7 +78,7 @@ function drop(event) {
 }
 
 function saveImg() {
-    const container = document.getElementById('container');
+    const container = document.getElementById('content');
     const potato_img = document.getElementById('Potato_im');
     html2canvas(container).then(canvas => {
         // As Base64 string
@@ -88,11 +88,10 @@ function saveImg() {
         const a = document.createElement('a');
         a.append(potato_img);
         a.href = dataURL;
-        console.log(a);
-        // a.download = 'captured_image.png';
-        // document.body.appendChild(a);
-        // a.click();
-        // document.body.removeChild(a);
+        a.download = 'captured_image.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
     });
 }
 
