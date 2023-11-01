@@ -81,6 +81,11 @@ function saveImg() {
     // Add a delay to allow elements to load
     setTimeout(() => {
         const container = document.getElementById('content');
+        
+        // Ensure the Potato_im image is included in the container
+        const potatoImage = document.getElementById('Potato_im');
+        container.appendChild(potatoImage.cloneNode(true));
+
         html2canvas(container).then(canvas => {
             // As Base64 string
             const dataURL = canvas.toDataURL();
@@ -92,6 +97,9 @@ function saveImg() {
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
+            
+            // Remove the cloned Potato_im image to avoid duplication
+            container.removeChild(potatoImage);
         });
     }, 1000); // 1000 milliseconds (1 second) delay
 }
