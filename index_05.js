@@ -80,26 +80,18 @@ function drop(event) {
 function saveImg() {
     // Add a delay to allow elements to load
     setTimeout(() => {
-        const container = document.getElementById('content');
-        
-        // Ensure the Potato_im image is included in the container
-        const potatoImage = document.getElementById('Potato_im');
-        container.appendChild(potatoImage.cloneNode(true));
-
+        var container = document.getElementById('content');
         html2canvas(container).then(canvas => {
             // As Base64 string
-            const dataURL = canvas.toDataURL();
+            var dataURL = canvas.toDataURL();
 
             // Create a link element and trigger the download
-            const a = document.createElement('a');
+            var a = document.createElement('a');
             a.href = dataURL;
             a.download = 'captured_image.png';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-            
-            // Remove the cloned Potato_im image to avoid duplication
-            container.removeChild(potatoImage);
         });
     }, 1000); // 1000 milliseconds (1 second) delay
 }
