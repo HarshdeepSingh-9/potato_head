@@ -108,11 +108,10 @@ input:checked+.slider:before {
 }
 
 .potato-body {
-    max-width: 400px;
+    max-width: 300px;
     transform: rotate(-55deg);
     margin-top: 200px;
-    margin-right: 50px;
-
+    border: 2px solid black;
 }
 
 .reccive {
@@ -128,14 +127,12 @@ input:checked+.slider:before {
     float: right;
     width: 500px;
     max-height: 800px;
-    margin: 20px;
     min-height: 800px;
     background-color: rgb(255, 255, 255);
     border: 2px double black;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    padding-left: 20px;
     
     
 }
@@ -167,5 +164,22 @@ input:checked+.slider:before {
 #Potato_im{
     max-width: 500px !important;
     margin-top: 50px;
+    padding-right: 5px;
+    margin-right: 20px;
+   
+
+}
+#normal-image{
+    width: 200px;
+    height: 200px;
+    border: 5px double black;
+    margin: 10px;
+}
+#normal-image:hover {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -99999999999;
+    transition: 5s ;
 
 }
