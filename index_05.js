@@ -78,10 +78,9 @@ function drop(event) {
 }
 
 function saveImg() {
-    var container = document.getElementById('content');
+    const container = document.getElementById('container');
     html2canvas(container).then(canvas => {
         // As Base64 string
-        const captureDiv = document.getElementById('content');
         const dataURL = canvas.toDataURL();
 
         // Create a link element and trigger the download
